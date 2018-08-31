@@ -3,11 +3,20 @@
 <title>{{#if title}}{{title}} &ndash; {{/if}}{{authorName}}</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:400,500">
-<style>{{{css}}}</style>
+<style>{{{{css}}}
+</style>
 
 {{#if isBlog}}
-<link rel="alternate" href="/blog/feed.xml" type="application/atom+xml" title="cheeaunblog">
-{{/if}}
+<link rel="alternate" href="/blog/feed.xml" type="application/atom+xml" title="cheeaunblog"> {{/if}}
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-125032359-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-125032359-1');
+</script>
 
 <div id="container">
   <header role="banner">
@@ -16,9 +25,8 @@
     </h1>
   </header>
   <div id="content">
-    {{#if isArticle}}<article>{{/if}}
-      {{{contents}}}
-    {{#if isArticle}}</article>{{/if}}
+    {{#if isArticle}}
+    <article>{{/if}} {{{contents}}} {{#if isArticle}}</article>{{/if}}
   </div>
   <footer>
     <nav>
@@ -31,25 +39,25 @@
   </footer>
 </div>
 <script>
-window.onload = function(){
-  var $figures = document.getElementsByTagName('figure');
-  if (!$figures.length) return;
-  var asideImages = function(){
-    for (var i=0, l=$figures.length; i<l; i++){
-      var $figure = $figures[i];
-      var $images = $figure.getElementsByTagName('img');
-      if ($images.length == 1){
-        var $img = $images[0];
-        var width = $img.naturalWidth || $img.width;
-        if (width <= 280 && (width/$figure.parentNode.offsetWidth*100 < 50)){
-          $figure.className = 'image-aside';
-        } else if ($figure.className){
-          $figure.className = '';
+  window.onload = function () {
+    var $figures = document.getElementsByTagName('figure');
+    if (!$figures.length) return;
+    var asideImages = function () {
+      for (var i = 0, l = $figures.length; i < l; i++) {
+        var $figure = $figures[i];
+        var $images = $figure.getElementsByTagName('img');
+        if ($images.length == 1) {
+          var $img = $images[0];
+          var width = $img.naturalWidth || $img.width;
+          if (width <= 280 && (width / $figure.parentNode.offsetWidth * 100 < 50)) {
+            $figure.className = 'image-aside';
+          } else if ($figure.className) {
+            $figure.className = '';
+          }
         }
       }
-    }
+    };
+    asideImages();
+    window.onresize = asideImages;
   };
-  asideImages();
-  window.onresize = asideImages;
-};
 </script>
