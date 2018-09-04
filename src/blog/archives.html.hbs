@@ -1,0 +1,10 @@
+<h1>Blog Archives</h1>
+
+<ul id="blog-archives">
+  {{#each posts}}
+    <li>
+      <time datetime="{{date}}">{{humanDate}}</time>
+      <a href="{{permalink}}" rel="bookmark">{{title}}</a>
+    </li>
+  {{/each}}
+</ul>

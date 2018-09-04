@@ -1,0 +1,15 @@
+<h1>Blog</h1>
+
+<div>
+  {{#each latestPosts}}
+    <article class="summary">
+      <header>
+        <h2><a href="{{permalink}}" rel="bookmark">{{title}}</a></h2>
+        <time datetime="{{date}}">{{humanDate}}</time>
+      </header>
+      <p>{{{summary}}}</p>
+    </article>
+  {{/each}}
+</div>
+
+<a href="/blog/archives">View entire archives →</a>
