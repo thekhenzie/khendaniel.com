@@ -18,6 +18,7 @@ metalsmith(__dirname)
         domainUrl: "http://khendaniel.com",
         description: "This is my site",
         logo: fs.readFileSync('src/assets/images/kd-logo.html.svg'),
+        icon: fs.readFileSync('src/assets/images/favicon.ico'),
         css: new CleanCSS().minify(fs.readFileSync('src/assets/style.css')).styles
     })
     .source('src')
