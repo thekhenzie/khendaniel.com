@@ -1,9 +1,11 @@
 {
   "name": "khendaniel.com",
   "version": "1.0.0",
-  "description": "khen's blogsite",
+  "description": "khen's web site",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build.js",
+    "deploy": "npm run build && cd build && git init . && git add . && git commit -m \"Deploy\"; git push \"git@github.com:blakeembrey/blakeembrey.com.git\" master:gh-pages --force && rm -rf .git",
+    "test": "./deploy.sh"
   },
   "repository": {
     "type": "git",
@@ -16,9 +18,11 @@
   },
   "homepage": "https://github.com/thekhenzie/khendaniel.com#readme",
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "clean-css": "^4.2.1",
     "fs": "0.0.1-security",
     "highlighter": "^0.1.0",
+    "image-size": "^0.6.3",
     "jstransformer-handlebars": "^1.1.0",
     "metalsmith": "^2.3.0",
     "metalsmith-collections": "^0.9.0",
