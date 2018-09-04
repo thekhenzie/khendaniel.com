@@ -4,8 +4,7 @@
   "description": "khen's web site",
   "scripts": {
     "build": "node build.js",
-    "deploy": "npm run build && cd build && git init . && git add . && git commit -m \"Deploy\"; git push \"git@github.com:blakeembrey/blakeembrey.com.git\" master:gh-pages --force && rm -rf .git",
-    "test": "./deploy.sh"
+    "deploy": "deploy.sh"
   },
   "repository": {
     "type": "git",

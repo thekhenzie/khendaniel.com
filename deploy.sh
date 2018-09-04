@@ -4,6 +4,7 @@ npm install
 node build.js
 cd build
 rm -rf .git/
+echo "www.khendaniel.com" > CNAME
 git init
 git remote add origin $GITURL
 git add .
