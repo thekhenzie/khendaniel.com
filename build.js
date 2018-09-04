@@ -8,6 +8,10 @@ var layouts = require('metalsmith-layouts');
 var inplace = require('metalsmith-in-place');
 var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
+
+var contentTitles = require(__dirname + '/plugins/content-titles');
+var blogData = require(__dirname + '/plugins/blog-data');
+
 metalsmith(__dirname)
     .metadata({
         authorName: 'Khen Daniel',
@@ -18,21 +22,14 @@ metalsmith(__dirname)
     })
     .source('src')
     .destination('build')
-    .use(markdown({
-        gfm: true,
-        tables: true,
-        highlight: highlighter()
-    }))
-    .use(layouts({
-        pattern: ['*.html', '**/*.html'],
-        default: 'layout.html.hbs'
-    }))
-    .use(inplace({
-        pattern: '**/*.hbs',
-    }))
-    .use(permalinks({
-        relative: false
-    }))
+    // .use(markdown({
+    //     gfm: true,
+    //     tables: true,
+    //     highlight: highlighter()
+    // }))
+    .use(markdown('commonmark'))
+    .use(contentTitles())
+    .use(blogData())
     .use(collections({
         latestPosts: {
             sortBy: 'date',
@@ -45,6 +42,16 @@ metalsmith(__dirname)
             pattern: 'blog/*/*/*.html',
             reverse: true
         }
+    }))
+    .use(inplace({
+        pattern: '**/*.hbs',
+    }))
+    .use(layouts({
+        pattern: ['*.html', '**/*.html'],
+        default: 'layout.html.hbs'
+    }))
+    .use(permalinks({
+        relative: false
     }))
     .build(function (err) {
         if (err) {
