@@ -8,7 +8,7 @@ var layouts = require('metalsmith-layouts');
 var inplace = require('metalsmith-in-place');
 var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
-
+var redirect = require('metalsmith-redirect');
 var contentTitles = require(__dirname + '/plugins/content-titles');
 var blogData = require(__dirname + '/plugins/blog-data');
 
@@ -54,6 +54,9 @@ metalsmith(__dirname)
     .use(permalinks({
         relative: false
     }))
+    .use(redirect({
+        '/ama': 'https://github.com/thekhenzie/ama/'
+      }))
     .build(function (err) {
         if (err) {
             throw err;
