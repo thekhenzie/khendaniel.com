@@ -18,7 +18,7 @@ The purpose of this site is to serve as a playground for my thoughts and experim
 This whole site is statically generated with [Metalsmith](http://www.metalsmith.io/), available on [GitHub](https://github.com/thekhenzie/khendaniel.com) and hosted on [GitHub Pages](https://pages.github.com/).
 
 
-Copyright
+Licensing & Copyright
 ---
 
-Unless otherwise stated, the copyright of all content on this site is owned by me.
+Licensed by [MIT](https://thekhenzie.mit-license.org). Unless otherwise stated, the copyright of all content on this site is owned by me.
