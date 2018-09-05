@@ -5,4 +5,11 @@ Khen Daniel
 
 <div style="text-align: center">
 Software Engineer. Aspiring Photographer. Hacker.
+
+<br/><br/>
+<a href="https://github.com/thekhenzie" target="_blank"><i class="fa fa-github"></i></a>
+<a href="https://fb.me/haroldbaniqued" target="_blank"><i class="fa fa-facebook"></i></a>
+<a href="https://instagram.com/kingkheeen" target="_blank"><i class="fa fa-instagram"></i></a>
+<a href="https://twitter.com/khndii" target="_blank"><i class="fa fa-twitter"></i></a>
+<a href="https://www.linkedin.com/in/harold-khen-baniqued-b2422a125/" target="_blank"><i class="fa fa-linkedin"></i></a>
 </div>
