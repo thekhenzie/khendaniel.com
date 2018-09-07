@@ -1,7 +1,7 @@
 React and Github Pages
 ===
 
-While I'm enhancing my blog site, out of curiosity, I wonder if a React app can also be hosted in Github Pages. I thought of ReactJS because I'm using it as a front-end framework on my work now together with ASP.NET as back-end. Of course, I did some research and yes, it is possible. So I'll share with you guys how do I do it.  
+While I'm enhancing my blog site,  I wonder if a React app can also be hosted in Github Pages. I thought of ReactJS because I'm using it as a front-end framework on my work together with ASP.NET as back-end. Of course, I did some research and yes, it is possible. So I'll share with you guys how do I do it.  
 
 ---
 First, let me show you an introduction for the technologies we will use:
