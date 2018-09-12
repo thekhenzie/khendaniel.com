@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title type="text">khendanielblog</title>
+	<id>tag:khendaniel.com,2018:blog</id>
+	<link rel="alternate" type="text/html" href="/blog"/>
+	<link rel="self" type="application/atom+xml" href="/blog/feed.xml"/>
+	<updated>2018-09-06T00:00:00+08:00</updated>
+	<author>
+		<name>Khen Daniel</name>
+	</author>
+		<entry>
+			<id>/blog/2018/09/obligatory-hello-world/</id>
+			<updated>2018-09-06T00:00:00+08:00</updated>
+			<title type="text">Obligatory &quot;Hello World&quot;</title>
+			<summary type="text">Hello World!This should have been my first blog post, but nevermind.I have never been much of a blogger before but now that I have moved on…</summary>
+			<link rel="alternate" type="text/html" href="/blog/2018/09/obligatory-hello-world/" title="Obligatory &quot;Hello World&quot;"/>
+		</entry>
+		<entry>
+			<id>/blog/2018/09/react-and-github-pages/</id>
+			<updated>2018-09-05T00:00:00+08:00</updated>
+			<title type="text">React and Github Pages</title>
+			<summary type="text">While I'm enhancing my blog site,  I wonder if a React app can also be hosted in Github Pages. I thought of ReactJS because I'm using it as…</summary>
+			<link rel="alternate" type="text/html" href="/blog/2018/09/react-and-github-pages/" title="React and Github Pages"/>
+		</entry>
+		<entry>
+			<id>/blog/2018/09/good-reads/</id>
+			<updated>2018-09-03T00:00:00+08:00</updated>
+			<title type="text">Good Reads</title>
+			<summary type="text">I have been reading articles and blogs all over the Net because I still don't have to work on. I will compile here all the articles that I f…</summary>
+			<link rel="alternate" type="text/html" href="/blog/2018/09/good-reads/" title="Good Reads"/>
+		</entry>
+		<entry>
+			<id>/blog/2018/09/christmas-season/</id>
+			<updated>2018-09-01T00:00:00+08:00</updated>
+			<title type="text">Christmas Season </title>
+			<summary type="text">"Uy ber na""Whenever I see boys and girls.."Here in Philippines, Christmas season starts as early as September. The term "ber [months] na "…</summary>
+			<link rel="alternate" type="text/html" href="/blog/2018/09/christmas-season/" title="Christmas Season "/>
+		</entry>
+		<entry>
+			<id>/blog/2018/08/building-in-action/</id>
+			<updated>2018-08-31T00:00:00+08:00</updated>
+			<title type="text">Building in action</title>
+			<summary type="text">Since Monday, I'm working on my blogsite. At first, I don't know how since I'm new to it. I've found several tutorials about creating blogsi…</summary>
+			<link rel="alternate" type="text/html" href="/blog/2018/08/building-in-action/" title="Building in action"/>
+		</entry>
+</feed>
