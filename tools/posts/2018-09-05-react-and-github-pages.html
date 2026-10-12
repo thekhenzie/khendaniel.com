@@ -1,0 +1,75 @@
+title: React and Github Pages
+date: 2018-09-05
+slug: 2018/09/react-and-github-pages
+archive: true
+---
+<p>While I&apos;m enhancing my blog site,  I wonder if a React app can also be hosted in Github Pages. I thought of ReactJS because I&apos;m using it as a front-end framework on my work together with ASP.NET as back-end. Of course, I did some research and yes, it is possible. So I&apos;ll share with you guys how do I do it.  </p>
+<hr>
+<p>First, let me show you an introduction for the technologies we will use:</p>
+<ul>
+<li><a href="https://reactjs.org/">React</a> - A JavaScript library for building interfaces.</li>
+<li><a href="https://github.com/git/git">Git</a> - A fast, scalable, distributed revision control system.</li>
+<li><a href="https://github.com/about">Github</a> - Web-based Git. Largest development platform.</li>
+<li><a href="https://pages.github.com/">Github Pages</a> - Gives hosting for repositories&apos; static websites on Github.</li>
+<li><a href="https://nodejs.org/">NodeJS</a> - A JavaScript run-time environment that executes JavaScript code outside of a browser.</li>
+<li><a href="https://www.npmjs.com/">npm</a> - A package manager for JavaSciprt and word&apos;s largest registry.</li>
+</ul>
+<hr>
+<p>I will assume that NodeJS and Git are already installed in your system, if not go ahead and install with the given links above.</p>
+<p>Let start!</p>
+<ol>
+<li>Since I&apos;ll just demo how to host a React App in Github pages; I will use the boilerplate, <a href="https://github.com/facebook/create-react-app">create-react-app</a>, created by <a href="https://fb.me">Facebook</a>.</li>
+</ol>
+<p>On your Node.JS command prompt, enter the following command.</p>
+<pre><code>$ npm install -g create-react-app
+</code></pre>
+<ol start="2">
+<li>After installing the module, let&apos;s create a project. I will name it &quot;<em>react-ghpages</em>&quot;.</li>
+</ol>
+<pre><code>$ create-react-app react-ghpages
+</code></pre>
+<ol start="3">
+<li>Once installed, open your project folder and run the app.</li>
+</ol>
+<pre><code>$ cd react-ghpages
+$ npm start
+</code></pre>
+<ol start="4">
+<li><p>Open <a href="http://localhost:3000">http://localhost:3000</a> to view it in the browser. After the page is loaded, let&apos;s proceed on creating the repository in Github.</p>
+</li>
+<li><p>Go to your Github account and create a new repository. I named my repository the same as the project. </p>
+</li>
+</ol>
+<figure><img src="/blog/images/screenshots/09-05-repo-name.png" alt="repo name" width="304" height="63"></figure>
+<ol start="6">
+<li>After creating the repository, let&apos;s go back to the project folder. In order to push the codes to Github, we&apos;ll initialize the project folder first.</li>
+</ol>
+<pre><code>$ git init
+$ git add .
+$ git commit -m &quot;Initial commit&quot;
+</code></pre>
+<ol start="7">
+<li>Let&apos;s now push the code to your Github repository created a while ago. It will create a master branch and will add the codes into it. Just don&apos;t forget to replace the <em>username</em> and <em>repo-name</em> with your own.</li>
+</ol>
+<pre><code>$ git remote add origin https://github.com/&lt;username&gt;/&lt;repo-name&gt;.git
+$ git push origin master
+</code></pre>
+<ol start="8">
+<li>Your codes are now online thanks to Github. We&apos;ll install another package name &quot;<em>gh-pages</em>&quot; to manage our Github pages.</li>
+</ol>
+<pre><code>$ npm install gh-pages --save
+</code></pre>
+<ol start="9">
+<li>After installing, let&apos;s modify the <strong>package.json</strong> file by adding the following statements. Make sure to replace the <em>username</em> and <em>repo-name</em> with your own. </li>
+</ol>
+<pre><code>https://&lt;username&gt;.github.io/&lt;repo-name&gt;
+</code></pre><figure><img src="/blog/images/screenshots/09-05-package-json.png" alt="package.json" width="483" height="383"></figure>
+<ol start="10">
+<li>To deploy, run the script on your package.json</li>
+</ol>
+<pre><code>$ npm run deploy
+</code></pre>
+<figure><img src="/blog/images/screenshots/09-05-publish.png" alt="published" width="557" height="528"></figure>
+<p>Once published, you can now visit your site.</p>
+<hr>
+<p>Even though Github pages only supported static websites, we can easily deploy a React app by compiling it for building purposes. <strong>Webpack</strong> is reponsible for it since it bundles Javascript files for usage in browser. <strong>Gh-pages</strong> module on the other hand creates a new branch, &quot;gh-pages&quot; under the repository, pushes the file there, and modifying your repository settings, making the Github Pages environment complete.</p>

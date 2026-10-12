@@ -1,0 +1,36 @@
+title: Back after eight years: rebuilding khendaniel.com
+date: 2026-10-12
+order: 1
+slug: 2026/10/rebuilding-khendaniel-com
+---
+<p>My last blog post here was in September 2018. Eight years. 😅</p>
+<p>I only noticed how bad it was when I opened the site again. The About page still said I'd been "a developer for almost 2 years" and that I was working at my old company. My profile photo was gone: I had linked it straight from Instagram, and that link expired a long time ago. The résumé link was dead too. The whole thing was a time capsule of 2018 me.</p>
+<p>So I finally rebuilt it.</p>
+
+<h2>It started with small tools</h2>
+<p>Lately I've been making little single-page tools for myself and the people around me: a <a href="https://project.khendaniel.com/bed-fit/">3D bed planner</a> when we were figuring out if a bed would fit the room, a <a href="https://project.khendaniel.com/habit-chain/">habit tracker</a>, and a <a href="https://project.khendaniel.com/2026-pickems/">pick board</a> for League of Legends Worlds 2026.</p>
+<p>The problem was they didn't really have a home. So I made one: <a href="https://project.khendaniel.com">project.khendaniel.com</a>. It's a plain GitHub repo with one folder per tool, served by GitHub Pages on a subdomain. Adding a new tool is just adding a folder and pushing.</p>
+
+<h2>Cleaning up the domain</h2>
+<p>While I was in GoDaddy's DNS settings, I found a few things I'd been ignoring for years:</p>
+<ul>
+<li>My main domain only had <strong>one</strong> of GitHub Pages' four IP addresses. It worked, but if that one server had a bad day, so did my site. I added the other three.</li>
+<li>My <a href="https://photography.khendaniel.com">photography site</a> had been broken since who knows when. The repo was set to use <code>photography.khendaniel.com</code>, but there was no DNS record for it, so the subdomain pointed nowhere. One CNAME record later, it's back.</li>
+<li>The new <code>project</code> subdomain is one more CNAME pointing to <code>thekhenzie.github.io</code>.</li>
+</ul>
+
+<h2>Goodbye, Metalsmith</h2>
+<p>In 2018 I built this site with <a href="https://metalsmith.io">Metalsmith</a>, a static site generator. I wrote about it in <a href="/blog/2018/08/building-in-action/">Building in action</a>. It was fun back then, but eight years later the setup was fragile. It needed old Node packages to build, and my deploy script would have quietly changed my domain to <code>www.khendaniel.com</code> the next time I ran it.</p>
+<p>So the new site is just plain HTML and CSS. No build step and nothing to install. If I want to change something, I edit the file and push. For a personal site, that's all I need.</p>
+
+<h2>The design, take two</h2>
+<p>My first attempt at the redesign was a very minimal, dark, text-only page. Looking at it, it felt too dark and too plain. It didn't feel like me.</p>
+<p>So for the second try I went back to my own photos. Most of them are Manila skylines, sunsets and street scenes I took around 2018. The colors on the site come from those photos too: the blue of a clear afternoon sky and the orange of a Manila sunset. The photos themselves are on the home page now, scattered like printed snapshots, plus a small gallery that links to the full portfolio.</p>
+<p>The projects page has real screenshots of everything, from the small tools to client work like <a href="https://www.guardhousehq.com/">GuardHouse</a>, where I work now, and older experiments like a Chrome extension that hides your Reddit username.</p>
+
+<h2>What I kept</h2>
+<p>The old blog posts are still here, at the same addresses, in the <a href="/blog/">archive</a>. They're a little cringe to reread, but they're mine. 😄</p>
+
+<h2>What's next</h2>
+<p>Worlds 2026 starts on October 15, and I already did way too much research for my Pick'Ems. So the next post is my predictions. Let's see how wrong I am.</p>
+<p>If you want to say hi, my email is on every page. Thanks for reading!</p>
