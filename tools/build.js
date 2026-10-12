@@ -24,12 +24,12 @@ function page(o) {
   return '<!doctype html>\n<html lang="en">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n' +
     (o.verify ? '<meta name="google-site-verification" content="_u7mBJTDwpy3Pv_1j1sCDz5ir-Qv0wSiJ7YPj0urcC0">\n' : '') +
     '<title>' + esc(title) + '</title>\n<meta name="description" content="' + esc(o.description) + '">\n' +
-    '<meta name="theme-color" content="#2b6ff2">\n<link rel="canonical" href="' + SITE + o.path + '">\n<link rel="icon" href="/favicon.ico">\n' +
+    '<meta name="theme-color" content="#2b6ff2">\n<link rel="canonical" href="' + SITE + o.path + '">\n<link rel="icon" href="/favicon.ico" sizes="any">\n<link rel="icon" type="image/svg+xml" href="/favicon.svg">\n<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n' +
     '<meta property="og:title" content="' + esc(title) + '">\n<meta property="og:description" content="' + esc(o.description) + '">\n<meta property="og:image" content="' + SITE + '/assets/img/photo-sunset.jpg">\n' +
     '<link rel="alternate" type="application/rss+xml" title="Khen Daniel" href="/blog/feed.xml">\n' +
     '<link rel="preconnect" href="https://fonts.googleapis.com">\n<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n' +
     '<link rel="stylesheet" href="' + FONTS + '">\n<link rel="stylesheet" href="/assets/site.css">\n</head>\n<body>\n<div class="wrap">\n' +
-    '<header class="site-header">\n  <a class="brand" href="/"><span class="logo" aria-hidden="true"></span>Khen Daniel</a>\n  <nav class="nav" aria-label="Main">' + nav + '</nav>\n</header>\n' +
+    '<header class="site-header">\n  <a class="brand" href="/"><img class="logo" src="/assets/kd.svg" alt="" width="46" height="24">Khen Daniel</a>\n  <nav class="nav" aria-label="Main">' + nav + '</nav>\n</header>\n' +
     '<main>\n' + o.body + '\n</main>\n' +
     '<footer class="site-footer">\n  <span>© ' + new Date().getFullYear() + ' Khen Daniel · <a href="mailto:' + EMAIL + '">' + EMAIL + '</a></span>\n  <span>Photos are mine, taken around Manila. Plain HTML on GitHub Pages.</span>\n</footer>\n' +
     '</div>\n</body>\n</html>\n';
